@@ -3,9 +3,13 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
+/*css de layout de area geral*/
+
 body {
     font-size: 13px;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 header {
     height: 100px;
@@ -53,10 +57,34 @@ header {
     border-bottom: 5px solid #000;
 }
 .menu li a:hover, .menu .active a{
-   border-bottom: 5px solid #B28756;
+   border-bottom: 5px solid #b98b59;
    color: #ccc;
 }
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    width: 195px;
+    height: 45px;
+    background-color: #b98b59;
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin: 30px 0px;
+
+    border: 2px solid #b98b59;
+    transition: all 0.02s linear;
+}
+.button:hover {
+    border: 2px solid #fff;
+}
 #banner {
     height: calc(100vh - 100px);
     background-color: #333;
@@ -91,31 +119,12 @@ header {
     font-size: 50px;
 }
 #banner h1 span {
-    color: #B28756;
+    color: #b98b59;
     
 }
 #banner h2 {
     text-transform: uppercase;
     margin-top: 20px;
-}
-#banner a {
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 600;
-    color: #fff;
-    display: block;
-    background-color: #B28756;
-    border-radius: 20px;
-    padding: 10px 30px;
-    margin: 30px;
-
-    border: 2px solid #B28756;
-    transition: all 0.02s linear;
-}
-#banner a:hover {
-    border: 2px solid #fff;
 }
 
 #banner .slider_changer {
@@ -131,7 +140,7 @@ header {
 #banner .pointer {
     width: 17px;
     height: 17px;
-    border: 2px solid #B28756;
+    border: 2px solid #b98b59;
     border-radius: 50%;
     margin-left: 5px;
     margin-right: 5px;
@@ -140,5 +149,126 @@ header {
 }
 #banner .pointer:hover, 
 #banner .pointer.active {
-    background-color: #B28756;
+    background-color: #b98b59;
+}
+
+.default{
+    width: 100vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .section_title,
+.default .section_desc {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.default .section_title {
+    font-size: 20px;
+}
+.default .section_desc {
+    font-size: 12px;
+    color: #afafaf;
+    margin-top: 13px;
+    margin-bottom: 40px;
+}
+.default .section_body {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.default.light {
+    background-color: #f7f7f7;
+}
+.default.light .section_title,
+.default.light .section_body {
+    color: #000;
+}
+
+.default.dark {
+    background-color: #000;
+}
+.default.dark .section_title,
+.default.dark .section_body{
+    color: #f7f7f7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*css de area especifica*/
+
+.section_about_us {
+    display: flex;
+}
+.section_about_us__left {
+    flex: 1;
+}
+.section_about_us__left p {
+    font-size: 14px;
+    line-height: 30px;
+}
+.section_about_us__right {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.section_about_us__right .video{
+    width: 446px;
+    height: 276px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 30px;
+    box-shadow: 3px 8px 20px #333;
+    text-shadow: 3px 3px 20px;
+}
+
+.section_services {
+    display: flex;
+}
+.section_services .section_service {
+    flex:1;
+    text-align: center;
+    padding: 15px;
+    border-left: 1px solid #333;
+}
+.section_services .section_service:last-child {
+    border-right: 1px solid #333;
+}
+.section_service img {
+    width: 80px;
+    height: 80px;
+}
+.section_service h4 {
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.section_service p {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #999;
 }
