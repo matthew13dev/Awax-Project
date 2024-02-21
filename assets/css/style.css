@@ -323,12 +323,12 @@ header {
     align-items: center;
 }
 .section_projects__photo {
-    width: 230px;
+    width: 280px;
 }
 .section_projects__photo_area{
     margin: 10px;
-    width: 210px;
-    height: 140px;
+    width: 257px;
+    height: 166px;
 
     transition: all 2s linear;
 }
