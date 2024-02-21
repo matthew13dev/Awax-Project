@@ -272,3 +272,95 @@ header {
     font-size: 13px;
     color: #999;
 }
+
+
+.section_projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section_projects_filters{
+    background-color: #ededed;
+    border: 1px solid #d0d0d0;
+    border-radius: 30px;    
+    display: inline-block;
+    padding: 0px 20px;
+    
+}
+.section_projects_filters ul,
+.section_projects_filters li {
+    list-style: none;
+    display: flex;
+}
+.section_projects_filters li {
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #d0d0d0;
+    border-bottom: 3px solid transparent;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.02s linear;
+}
+.section_projects_filters li:hover,
+.section_projects_filters li.active{
+    border-bottom: 3px solid #b98b59;
+    color: #b98b59;
+}
+.section_projects_filters li:first-child {
+    border-left: 0;
+}
+
+
+.section_projects__photos {
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.section_projects__photo {
+    width: 230px;
+}
+.section_projects__photo_area{
+    margin: 10px;
+    width: 210px;
+    height: 140px;
+
+    transition: all 2s linear;
+}
+.section_projects__photo img{
+    width: inherit;
+    height: inherit;
+}
+
+.section_projects__photo_info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: #f7f7f7;
+}
+.section_projects__photo_area:hover .section_projects__photo_info {
+    display: flex;
+}
+.section_projects__photo_info h5 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.section_projects__photo_info p {
+    font-size: 10px;
+    text-align: center;
+    text-transform: initial;
+}
