@@ -192,6 +192,29 @@ header {
 .default.dark .section_body{
     color: #f7f7f7;
 }
+.slider_changer {
+    margin-top: 30px;
+    height: 20px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.pointer {
+    width: 17px;
+    height: 17px;
+    border: 2px solid #b98b59;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.02s linear;
+}
+
+.pointer:hover, 
+.pointer.active {
+    background-color: #b98b59;
+}
 
 
 
@@ -407,29 +430,6 @@ header {
     box-shadow: inset 0 0 20px #999;
 }
 
-.section__team_area .slider_changer {
-    margin-top:30px;
-    height: 20px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.section__team_area .pointer {
-    width: 17px;
-    height: 17px;
-    border: 2px solid #b98b59;
-    border-radius: 50%;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    transition: all 0.02s linear;
-}
-.section__team_area .pointer:hover, 
-.section__team_area .pointer.active {
-    background-color: #b98b59;
-}
-
 .section__team_avatar {
     width: 180px;
     height: 180px;
@@ -475,11 +475,42 @@ header {
     cursor: pointer;
 }
 
+.section_clients {
+    overflow: hidden;
+    max-width: 740px;
+    margin: auto;
+}
+.section_clients .sliders {
+    overflow: hidden;
+    width: 1140vw;
+    height: 100%;
+    margin: auto;
+}
+.section_clients .slide {
+    display: inline-flex;
+    max-width: 740px;
+    display: inline-block;
+    margin: auto;
+}
+.section_clients .slide_area {
+    text-align: center;
+}
 
-
-
-
-
+.section_clients .slide_area h2 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.section_clients .slide_area h3 {
+    margin-bottom: 30px;
+}
+.section_clients .slide_area img {
+    margin-bottom: 20px;
+}
+.section_clients .slide_area p {
+    text-align: center;
+    line-height: 25px;
+    font-size: 15px;
+}
 
 .section_map {
     background-image: url('../images/mapa.jpg');
