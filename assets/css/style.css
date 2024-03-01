@@ -588,3 +588,6 @@ header {
 .info_item a:hover {
     text-decoration: underline;
 }
+footer {
+    color: #fff;
+}
