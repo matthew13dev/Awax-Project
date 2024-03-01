@@ -474,3 +474,59 @@ header {
     background-color: #b98b59;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+.section_map {
+    background-image: url('../images/mapa.jpg');
+    width: 100vw;
+    height: auto;
+    padding: 35px 0px;
+}
+.section_map .map_area {
+    width: 1140px;
+    height: auto;
+    margin: auto;
+
+}
+.section_map .map_info {
+    background-color: #fff;
+    color: #999;
+    width: 50%;
+    height: auto;
+    padding: 55px 40px 60px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.section_map .info_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.info_item .icon {
+    width: 35px;
+    height: 35px;
+    background-color: #999;
+    border-radius: 50%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.info_item a {
+    display: inline-block;
+    text-decoration: none;
+    color: #999;
+    transition: all 0.02s linear;
+}
+.info_item a:hover {
+    text-decoration: underline;
+}
