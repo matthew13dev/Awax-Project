@@ -3,7 +3,9 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
+html {
+    overflow-x:hidden ;
+}
 /*css de layout de area geral*/
 
 body {
@@ -25,17 +27,17 @@ header {
 }
 .logo {
     display: flex;
-    width: 100px;
 }
 .logo img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    width: 150px;
 }
 .menu {
     flex: 1;
     display: flex;
     justify-content: flex-end;
+}
+.menu .menu_mobile {
+    display: none;
 }
 .menu ul,
 .menu li {
@@ -515,7 +517,7 @@ header {
 .section_companys {
     background-color: #fff;
     max-width: 1140px;
-    height: 160px;
+    min-height: 160px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -590,4 +592,215 @@ header {
 }
 footer {
     color: #fff;
+}
+
+@media (max-width:450px) {
+    header .logo img{
+        margin-left: 50px;
+    }
+    .menu .menu_mobile {
+        display: block;
+        align-items: center;
+        margin-right: 50px;
+        transform: scale(1.2);
+    }
+    .menu nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 50vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+        }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li a {
+        font-size: 17px;
+        font-weight: bold;
+        border: 0;
+        height: 50px;
+        margin-left: 30px;
+        }
+    .menu li.active a, 
+    .menu li a:hover {
+        border: none;
+        color: #b98b59;
+    }
+    #banner h1 {
+        font-size: 30px;
+    }
+
+    #banner h2 {
+        font-size: 13px;
+    }
+    .section_about_us {
+        padding: 0px 50px;
+    }
+    .section_about_us, .section_about_us__left, .section_about_us__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .section_about_us__left p{
+        text-align: justify;
+      }
+      .section_about_us__right .video {
+        transform: scale(0.7);
+      }
+      .section_services {
+        padding: 0px 50px;
+        flex-wrap: wrap;
+      }
+      .section_services .section_service {
+        flex-wrap: wrap;
+        min-width: 100%;
+        margin-top: 50px;
+        border-left: none;
+        text-align: center;
+      }
+      .section_services .section_service:last-child{
+        border: none;
+      }
+      .section_service p {
+        width: 50%;
+        margin: auto;
+      }
+      .section_projects_filters {
+        margin: 
+        0px 50px;
+      }
+      .section_projects_filters ul {
+        flex-wrap: wrap;
+      }
+      .section_team {
+        max-width: 320px;
+      }
+      .section_clients .slide {
+        max-width: 450px;
+      }
+      .section_clients .slide_area {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section_clients .slide_area p {
+        width: 90%;
+      }
+      .section_companys .containner {
+        justify-content: start;
+        height: 50px;
+      }
+      .section_map {
+        padding: 0;
+        padding-bottom: 250px;
+      }
+      .section_map .map_area,
+      .section_map .map_info {
+        width: 100%;
+      }
+      .section_map .info_item {
+        margin-bottom: 30px;
+      }
+
+}
+
+@media (min-width: 450px) and (max-width:850px) {
+    header .logo img{
+        margin-left: 50px;
+    }
+    .menu .menu_mobile {
+        display: block;
+        align-items: center;
+        margin-right: 50px;
+        transform: scale(1.4);
+    }
+    .menu nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+        }
+    .menu ul {
+        flex-direction: column;
+    }
+    .menu li a {
+        font-size: 27px;
+        font-weight: bold;
+        border: 0;
+        height: 50px;
+        margin-left: 50px;
+        }
+    .menu li.active a, 
+    .menu li a:hover {
+        border: none;
+        color: #b98b59;
+    }
+    .section_about_us {
+        padding: 0px 50px;
+    }
+    .section_about_us, .section_about_us__left, .section_about_us__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .section_services {
+        padding: 0px 50px;
+        flex-wrap: wrap;
+      }
+      .section_services .section_service {
+        flex-wrap: wrap;
+        min-width: 50%;
+        margin-top: 50px;
+        border-left: none;
+        text-align: center;
+      }
+      .section_services .section_service:last-child{
+        border: none;
+      }
+      .section_service p {
+        width: 50%;
+        margin: auto;
+      }
+      .section_team {
+        max-width: 640px;
+      }
+      .section_clients .slide_area {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section_clients .slide_area p {
+        width: 50%;
+      }
+      .section_companys .containner {
+        flex-wrap: wrap;
+      }
+      .section_companys .company_logo {
+        width: 240px;
+        margin-top: 30px;
+      }
+      .section_companys .company_logo img {
+        transform: scale(1.1);
+      }
+      .section_map {
+        padding: 50px;
+      }
+      .section_map .map_area,
+      .section_map .map_info {
+        width: 100%;
+      }
+      .section_map .info_item {
+        margin-bottom: 30px;
+      }
 }
